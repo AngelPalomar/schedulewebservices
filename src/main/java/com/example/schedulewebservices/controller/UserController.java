@@ -66,7 +66,7 @@ public class UserController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{user_name}")
     public ResponseEntity<User> delete(@PathVariable String user_name) {
         User userStored = userDao.findByName(user_name);
         if (userStored != null) {
